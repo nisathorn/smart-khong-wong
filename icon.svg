@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="96" fill="#7a2e15"/>
+<ellipse cx="256" cy="270" rx="190" ry="140" fill="none" stroke="#d5a834" stroke-width="28"/>
+<circle cx="132" cy="284" r="42" fill="#d5a834" stroke="#5a2d18" stroke-width="10"/>
+<circle cx="190" cy="176" r="42" fill="#d5a834" stroke="#5a2d18" stroke-width="10"/>
+<circle cx="322" cy="176" r="42" fill="#d5a834" stroke="#5a2d18" stroke-width="10"/>
+<circle cx="380" cy="284" r="42" fill="#d5a834" stroke="#5a2d18" stroke-width="10"/>
+<circle cx="256" cy="370" r="42" fill="#d5a834" stroke="#5a2d18" stroke-width="10"/>
+<text x="256" y="292" text-anchor="middle" font-family="sans-serif" font-size="80" font-weight="700" fill="#fff8eb">ฆ</text>
+</svg>

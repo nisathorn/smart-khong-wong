@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#7a2e15" />
+  <meta name="description" content="ฆ้องวงจำลองอัจฉริยะสำหรับทบทวนบทเพลงดนตรีไทยบนโทรศัพท์" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>ฆ้องวงจำลองอัจฉริยะ</title>
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">SMART KHONG WONG</p>
+      <h1>ฆ้องวงจำลองอัจฉริยะ</h1>
+      <p class="subtitle">เครื่องมือทบทวนเพลงดนตรีไทยบนโทรศัพท์</p>
+    </div>
+    <button id="installBtn" class="secondary hidden" type="button">ติดตั้งแอป</button>
+  </header>
+
+  <main>
+    <section class="control-panel card">
+      <div class="control-grid">
+        <label>
+          เพลง
+          <select id="songSelect"></select>
+        </label>
+        <label>
+          โหมด
+          <select id="modeSelect">
+            <option value="free">เล่นอิสระ</option>
+            <option value="practice">ฝึกตามโน้ต</option>
+            <option value="listen">ฟังตัวอย่าง</option>
+            <option value="test">ทดสอบ</option>
+          </select>
+        </label>
+        <label>
+          ความเร็ว
+          <select id="tempoSelect">
+            <option value="900">ช้า</option>
+            <option value="650" selected>ปานกลาง</option>
+            <option value="430">เร็ว</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="action-row">
+        <button id="startBtn" class="primary" type="button">เริ่ม</button>
+        <button id="stopBtn" class="secondary" type="button">หยุด</button>
+        <button id="resetBtn" class="ghost" type="button">เริ่มใหม่</button>
+      </div>
+    </section>
+
+    <section class="status card" aria-live="polite">
+      <div>
+        <span class="status-label">สถานะ</span>
+        <strong id="statusText">พร้อมใช้งาน</strong>
+      </div>
+      <div>
+        <span class="status-label">คะแนน</span>
+        <strong id="scoreText">0%</strong>
+      </div>
+      <div>
+        <span class="status-label">ลำดับ</span>
+        <strong id="progressText">0 / 0</strong>
+      </div>
+    </section>
+
+    <section class="notation card">
+      <div class="section-title">
+        <h2>แนวโน้ต</h2>
+        <button id="toggleNoteBtn" class="ghost small" type="button">ซ่อนโน้ต</button>
+      </div>
+      <div id="notation" class="notation-row"></div>
+    </section>
+
+    <section class="instrument card">
+      <div class="section-title">
+        <h2>ฆ้องวงใหญ่ 16 ลูก</h2>
+        <span class="hint">แตะลูกฆ้องเพื่อเล่นเสียง</span>
+      </div>
+      <div id="gongStage" class="gong-stage" aria-label="ฆ้องวงจำลอง"></div>
+    </section>
+
+    <section class="history card">
+      <div class="section-title">
+        <h2>ผลการฝึกล่าสุด</h2>
+        <button id="clearHistoryBtn" class="ghost small" type="button">ล้างประวัติ</button>
+      </div>
+      <div id="historyList" class="history-list">
+        <p class="muted">ยังไม่มีประวัติการฝึก</p>
+      </div>
+    </section>
+
+    <section class="teacher-note card">
+      <h2>สำหรับครูผู้สอน</h2>
+      <p>สามารถเพิ่มเพลงหรือแก้แนวโน้ตได้จากตัวแปร <code>SONGS</code> ในไฟล์ <code>app.js</code> โดยใช้หมายเลขลูกฆ้อง 1–16 ตามลำดับเสียงต่ำไปสูง</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>ต้นแบบ Web App ภาษาไทย • ใช้งานได้บนโทรศัพท์ แท็บเล็ต และคอมพิวเตอร์</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

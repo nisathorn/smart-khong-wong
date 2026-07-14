@@ -1,0 +1,17 @@
+{
+  "name": "ฆ้องวงจำลองอัจฉริยะ",
+  "short_name": "Smart Khong",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7efe3",
+  "theme_color": "#7a2e15",
+  "description": "Web App สำหรับฝึกทบทวนเพลงดนตรีไทยด้วยฆ้องวงจำลอง",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
